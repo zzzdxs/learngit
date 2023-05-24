@@ -35,7 +35,7 @@ GitHub创建repository                  （网页）
 查看当前分支                             git branch
 新分支修改结果在合并前不影响master旧分支，即切换回旧分支再查看文件内容不变。
 将<name>分支成果合并至当前分支             git merge <name>
-删除分支                                git branch -d <name>
+删除分支                                 git branch -d <name>
 两个分支同时修改时出现冲突后直接在文件统一修改解决冲突并提交
 查看分支合并图(带参数)                     git log --graph --pretty=oneline --abbrev-commit
 
@@ -61,5 +61,25 @@ Fast forward模式删除分支后会丢掉分支信息，采用/git merge --no-f
 强行删除未合并过的分支                      git branch -D <name>
 查看远程库                                git remote
 查看远程库详细信息                         git remote -v
+
+多人协作：
+远程clone默认master分支
+Dell@DESKTOP-UGLUL9N MINGW64 /d/learngit/learngit (master)
+$ ls
+LICENSE.txt  learngit.txt  readme.txt  test.txt
+
+Dell@DESKTOP-UGLUL9N MINGW64 /d/learngit/learngit (master)
+$ git checkout -b dev origin/dev
+Switched to a new branch 'dev'
+branch 'dev' set up to track 'origin/dev'.
+
+Dell@DESKTOP-UGLUL9N MINGW64 /d/learngit/learngit (dev)
+$ ls
+LICENSE.txt  env.txt  learngit.txt  readme.txt  test.txt
+由此切换到dev分支并在此基础上进行开发和提交
+若同时对dev分支做修改后“我”再次提交修改，则会产生冲突而推送push失败:
+指定本地dev和远程origin/dev分支的连接            git branch --set-upstream-to=origin/dev dev
+抓取最新提交                                                    git pull
+手动解决冲突（在文件中修改）再add commit push
 
 
