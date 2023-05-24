@@ -35,7 +35,9 @@ GitHub创建repository                  （网页）
 查看当前分支                             git branch
 新分支修改结果在合并前不影响master旧分支，即切换回旧分支再查看文件内容不变。
 将<name>分支成果合并至当前分支             git merge <name>
-删除分支                               git branch -d <name>
+删除分支                                git branch -d <name>
+两个分支同时修改时出现冲突后直接在文件统一修改解决冲突并提交
+查看分支合并图(带参数)                     git log --graph --pretty=oneline --abbrev-commit
 
 
 
