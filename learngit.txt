@@ -57,5 +57,9 @@ Fast forward模式删除分支后会丢掉分支信息，采用/git merge --no-f
 （git branch:* dev）
 将之前修改bug的提交复制到dev：          git cherry-pick <commit ID>
 
+开发新功能最好新建feature分支
+强行删除未合并过的分支                                        git branch -D <name>
+
+
 
 
