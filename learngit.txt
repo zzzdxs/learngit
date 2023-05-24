@@ -31,7 +31,7 @@ GitHub创建repository                  （网页）
 --分支管理--
 新建分支                                git branch <name>
 切换分支                                git checkout <name>  /  git switch <name>
-新建并切换分支                           git checkout -b <name>   /   git switch -b <name> 
+新建并切换分支                           git checkout -b <name>   /   git switch -c <name> 
 查看当前分支                             git branch
 新分支修改结果在合并前不影响master旧分支，即切换回旧分支再查看文件内容不变。
 将<name>分支成果合并至当前分支             git merge <name>
