@@ -1,0 +1,30 @@
+创建空目录                             mkdir <listname>
+进入目录                                cd <listname>
+显示当前目录                         pwd
+仓库初始化                             git init
+添加文件到缓存区                  git add <filename>
+提交所有更改                         git commit -m "explanation"
+查看仓库当前状态                  git status
+查看文件修改情况                  git diff <filename>
+查看历史记录commit id    git log
+查看历史记录简化版              git log --pretty=oneline
+回退上个版本                         git reset --hard HEAD^
+回退指定版本                         git reset --hard <commit id>  （已commit再修改）
+查看历史命令                         git reflog
+撤销工作区修改                     git checkout -- <filename>  （前提是提交过版本库commit过）
+撤销提交暂存区                     git reset HEAD <filename>
+删除本地文件                         rm <filename>
+提交删除操作至缓存区          git rm <filename>      (之后需要commit)
+
+远程仓库
+创建SSH key           ssh-keygen -t rsa -C "youremail@example.com"
+GitHub添加SSH key    （网页）
+GitHub创建repository （网页）
+本地仓库关联GitHub     git remote add origin <SSH name> （origin是对远程库习惯命名）
+本地更新推送GitHub     git push -u origin master （第一次推送加-u参数，之后不用）
+查看远程库信息                      git remote -v
+解绑本地远程                         git remote rm <name>  （物理删除需网页上删除）
+从远程库克隆
+
+
+          
