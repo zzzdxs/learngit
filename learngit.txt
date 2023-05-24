@@ -42,17 +42,17 @@ GitHub创建repository                  （网页）
 Fast forward模式删除分支后会丢掉分支信息，采用/git merge --no-ff -m "merge with no-ff" dev/禁用Fast forward，使用/git log --graph --pretty=oneline --abbrev-commit/查看分支历史可以看到合并痕迹。
 
 在dev工作时临时修复master上的bug：
-暂存工作现场                                                                     git stash
-切换至bug分支                                                                 git checkout master
-创建临时修复分支                                                             git checkout -b issue
+暂存工作现场                             git stash
+切换至bug分支                            git checkout master
+创建临时修复分支                          git checkout -b issue
 修改文件后提交（add commit）
 切换到master合并并删除issue      git checkout master \ git merge --no-ff -m "merged bug fix" issue
-回到dev继续工作                                       git switch dev
-查看工作现场                                              git stash list
-恢复工作现场但不删除stash        git stash apply
-删除stash                     git stash drop
-恢复工作现场并删除stash          git stash pop
-多次stash后恢复指定stash                   git stash apply stash@{?}
+回到dev继续工作                          git switch dev
+查看工作现场                             git stash list
+恢复工作现场但不删除stash                  git stash apply
+删除stash                               git stash drop
+恢复工作现场并删除stash                    git stash pop
+多次stash后恢复指定stash                  git stash apply stash@{?}
 同时master上该bug修改了而由master分出的dev上bug还未修改：
 （git branch:* dev）
 将之前修改bug的提交复制到dev：          git cherry-pick <commit ID>
