@@ -84,6 +84,6 @@ LICENSE.txt  env.txt  learngit.txt  readme.txt  test.txt
 **一般多人协作，master主分支用于大版本更新必须远程同步；dev开发分支，团队成员在上面工作远程同步；bug分支用于本地修复；feature分支更多是实验代码。
 删除远程分支                                            git push origin --delete <branchname>
 清除本地无效分支                                     git fetch -p
-
+**不太会的分支整理为直线                     git rebase [把本地未push的分叉提交历史整理为直线，需三方对比]
 
 
